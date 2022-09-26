@@ -1,0 +1,24 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Soundscape player</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+  <!-- Lottie is needed for button animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.7/lottie.min.js" integrity="sha512-HDCfX3BneBQMfloBfluMQe6yio+OfXnbKAbI0SnfcZ4YfZL670nc52Aue1bBhgXa+QdWsBdhMVR2hYROljf+Fg==" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="soundscape-player.js"></script>
+  <div class="audio-visualizer">
+    <!-- Specify display height and width as well as min and max frequency for soundscape -->
+    <div class="soundscape-player" view-width="600" data-height="600" data-freq-min="0" data-freq-max="10" step="1800" rate="5" hour-start="0" minute-start="0" am-pm="true">
+      <img id="soundscape-img" src="data/soundscape_sample.png" />
+      <div id="audio-player">
+        <audio preload="metadata">
+          <!-- Main audio source -->
+          <source id="audio-src" src="data/clip_best_fit.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
